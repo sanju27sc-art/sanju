@@ -1,0 +1,14 @@
+function drawChart(s, a, v) {
+  const ctx = document.getElementById("mainChart");
+
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Sanction", "Actual", "Vacancy"],
+      datasets: [{
+        data: [s, a, v],
+        backgroundColor: ["#2563eb", "#16a34a", "#dc2626"]
+      }]
+    }
+  });
+}
